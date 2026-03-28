@@ -63,6 +63,11 @@ ul {
   list-style-type: square;
   padding-left: 20px;
 }
+.reflection {
+  margin-top: 15px;
+  font-weight: 500;   /* semi-bold */
+  font-style: italic; /* optional */
+}
 
 li {
   margin-bottom: 8px;
