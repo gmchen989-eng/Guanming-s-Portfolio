@@ -1,13 +1,13 @@
-# Guanming-s-Portfolio
+# Guanming's Professional Portfolio
 
 ## Personal Statement
-I am an Accountancy graduate from Singapore Polytechnic with a strong passion for numbers and attention to detail. I have built a solid foundation in financial reporting, taxation, and accounting principles, complemented by experience in Excel VBA, RPA, Python, SQL, and KNIME for data analysis and automation.
+Hello everyone! I am an Accountancy graduate from Singapore Polytechnic with a strong passion for numbers and attention to detail. I have built a solid foundation in financial reporting, taxation, and accounting principles, complemented by experience in Excel VBA, RPA, Python, SQL, and KNIME for data analysis and automation.
 
 My academic performance reflects growth and consistency. While maintaining a CGPA of 3.69, I achieved a perfect 4.0 GPA in my final year, demonstrating my ability to adapt and excel. This reflects my discipline, resilience, and commitment to excellence.
 
 Guided by integrity and continuous improvement, I aspire to become a forward-thinking accounting professional who leverages technology to contribute meaningfully to organisations and the community.
 
-I am also confident that AI will play an increasingly important role in the accounting industry in the near future, and I am eager to explore how we can leverage technology to further enhance operational efficiency for organisations.
+I am also confident that AI will play an increasingly important role in the accounting industry in the near future, and I am eager to explore how we can leverage technology to further enhance operational efficiency for organisations!
 
 ## Academic Achievements
 - Diploma in Accountancy (DAC), Singapore Polytechnic
