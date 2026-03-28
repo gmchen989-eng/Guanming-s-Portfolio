@@ -79,7 +79,15 @@ ul {
 li {
   margin-bottom: 8px;
 }
-
+/* Certificate styling */
+.certificate {
+  max-width: 600px;        /* keeps it from being too wide */
+  display: block;          /* makes it sit on its own line */
+  margin: 20px auto;       /* centers it with spacing */
+  border: 1px solid #ccc;  /* neat border */
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.1); /* subtle shadow */
+  border-radius: 6px;      /* slightly rounded corners */
+}
 /* Paragraphs */
 p {
   margin-bottom: 15px;
