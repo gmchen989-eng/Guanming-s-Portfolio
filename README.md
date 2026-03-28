@@ -1,5 +1,5 @@
 # Guanming's Professional Portfolio
-![Banner](./Assets/banner.jpg)
+
 ## Personal Statement
 Hello everyone! I am an Accountancy graduate from Singapore Polytechnic with a strong passion for numbers and attention to detail. I have built a solid foundation in financial reporting, taxation, and accounting principles, complemented by experience in Excel VBA, RPA, Python, SQL, and KNIME for data analysis and automation.
 
