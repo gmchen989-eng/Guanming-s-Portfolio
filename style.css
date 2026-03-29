@@ -15,25 +15,13 @@ nav {
   text-align: center;
 }
 
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;           /* use flex instead of inline-flex */
-  flex-wrap: wrap;         /* allow wrapping on small screens */
-  justify-content: center; /* keep centered */
-}
-
-nav ul li {
-  margin: 8px 10px;        /* add vertical margin so wrapped rows have space */
-}
-
 nav a {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s ease;
-  font-size: 0.95em;       /* slightly smaller font for mobile */
+  font-size: 0.95em;
+  margin: 0 8px;
 }
 
 nav a:hover {
@@ -41,7 +29,7 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* Header */
+/* Header (used by other sections) */
 header {
   background: #4a69bd;
   color: white;
@@ -54,7 +42,7 @@ header h1 {
   font-size: 2.2em;
 }
 
-/* Section styling */
+/* Section styling (default) */
 section {
   width: 100%;
   max-width: 900px;
@@ -138,7 +126,7 @@ p {
   margin-bottom: 15px;
 }
 
-/* Software grid */
+/* Software grid (Skills section) */
 .software-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -207,7 +195,7 @@ p {
 
 @media (max-width: 600px) {
   nav a {
-    font-size: 0.85em;   /* shrink nav text further on very small screens */
+    font-size: 0.85em;
   }
 
   .software-grid {
@@ -215,56 +203,87 @@ p {
   }
 }
 
-/* Achievements section styling */
+/* Achievements banner (scoped, won’t affect other sections) */
+.achievements-banner {
+  background: linear-gradient(to bottom, #000000, #1a2a6c); /* black to dark blue */
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.achievements-banner h1 {
+  margin: 0;
+  font-size: 2.2em;
+}
+
+.achievements-banner p {
+  margin-top: 10px;
+  font-size: 1.1rem;
+}
+
+/* Achievements section cards */
 #achievements {
   padding: 2rem 1rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .achievement-card {
-  background: #f0f8ff; /* light blue background to match Skills section */
+  background: white;
   border-radius: 8px;
-  padding: 1.5rem;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
 .achievement-card h2 {
-  font-size: 1.4rem;
-  margin-bottom: 1rem;
-  color: #003366; /* consistent heading color */
-}
-
-.achievement-card ul {
-  list-style-type: disc;
-  padding-left: 1.2rem;
+  font-size: 1.1em;
+  margin-bottom: 0.8rem;
   color: #333;
 }
 
-.achievement-card li {
-  margin-bottom: 0.5rem;
-  font-size: 1rem;
-}
-
+.achievement-card ul,
 .achievement-card p {
-  font-size: 1rem;
+  font-size: 0.95rem;
   color: #444;
   line-height: 1.5;
+  margin: 0 auto;
+  text-align: left;
+  max-width: 90%;
+}
+
+/* Hover effect identical to Skills */
+.achievement-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+  background-color: #cce6ff;
 }
 
 /* Mobile adjustments for achievements */
 @media (max-width: 768px) {
+  .achievements-banner {
+    font-size: 1rem;
+    padding: 30px 15px;
+  }
+
+  .achievements-banner h1 {
+    font-size: 1.8em;
+  }
+
   .achievement-card {
-    padding: 1rem;
+    padding: 15px;
   }
 
   .achievement-card h2 {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
-  .achievement-card li,
+  .achievement-card ul,
   .achievement-card p {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
   }
 }
