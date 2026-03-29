@@ -6,43 +6,23 @@ body {
   color: #333;
 }
 
-/* Navigation bar */
-nav {
-  background-color: #333;   /* dark bar */
-  padding: 15px 0;
-  text-align: center;
-}
-
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-nav ul li {
-  margin: 0 15px;
-}
-
-/* Force ALL link states to be white, non-underlined */
+/* Navigation bar links */
 nav ul li a,
 nav ul li a:link,
 nav ul li a:visited,
 nav ul li a:active,
 nav ul li a:focus {
-  color: white;             /* always white text */
-  text-decoration: none;    /* no underline */
+  color: white !important;          /* always white */
+  text-decoration: none !important; /* no underline */
   font-weight: bold;
   transition: color 0.3s ease;
 }
 
 /* Hover effect */
 nav ul li a:hover {
-  color: #ffcc00;           /* gold hover */
-  text-decoration: none;    /* prevent underline */
-  background: none;         /* prevent highlight background */
+  color: #ffcc00 !important;        /* gold hover */
+  text-decoration: none !important;
+  background: none !important;
 }
 
 /* Shared Banner Style (Skills, Achievements, Home) */
