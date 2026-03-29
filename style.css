@@ -29,30 +29,25 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* Header */
-header {
-  background: #4a69bd;
+/* Banner identical to Skills */
+.section-banner {
+  background: linear-gradient(to bottom, #000000, #1a2a6c); /* black to dark blue */
   color: white;
-  padding: 40px 20px;
   text-align: center;
+  padding: 50px 20px;
 }
 
-header h1 {
+.section-banner h1 {
   margin: 0;
   font-size: 2.2em;
 }
 
-/* Banner styling identical to Skills */
-.section-banner {
-  background: linear-gradient(135deg, #2a4365, #4a69bd); /* gradient */
-  color: white;
-  text-align: center;
-  padding: 30px 20px;
+.section-banner p {
+  margin-top: 10px;
   font-size: 1.1rem;
-  margin-bottom: 25px;
 }
 
-/* Achievements section styled like Skills */
+/* Achievements section cards */
 #achievements {
   padding: 2rem 1rem;
   display: grid;
@@ -63,7 +58,7 @@ header h1 {
 }
 
 .achievement-card {
-  background: white; /* match Skills cards */
+  background: white;
   border-radius: 8px;
   padding: 20px;
   text-align: center;
@@ -72,7 +67,7 @@ header h1 {
 }
 
 .achievement-card h2 {
-  font-size: 1.1em; /* same as Skills headings */
+  font-size: 1.1em;
   margin-bottom: 0.8rem;
   color: #333;
 }
@@ -98,7 +93,11 @@ header h1 {
 @media (max-width: 768px) {
   .section-banner {
     font-size: 1rem;
-    padding: 18px;
+    padding: 30px 15px;
+  }
+
+  .section-banner h1 {
+    font-size: 1.8em;
   }
 
   .achievement-card {
