@@ -54,7 +54,7 @@ header h1 {
   font-size: 2.2em;
 }
 
-/* Section styling */
+/* Section styling (default) */
 section {
   width: 100%;
   max-width: 900px;
@@ -215,25 +215,38 @@ p {
   }
 }
 
-/* Achievements section styling */
+/* Banner styling (same as Skills section) */
+.section-banner {
+  background-color: #4a69bd; /* same blue as header */
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+/* Achievements section styled like Skills */
 #achievements {
   padding: 2rem 1rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .achievement-card {
-  background: #f0f8ff; /* light blue background to match Skills section */
+  background: white; /* match Skills cards */
   border-radius: 8px;
-  padding: 1.5rem;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 1.2rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
 .achievement-card h2 {
-  font-size: 1.4rem;
-  margin-bottom: 1rem;
-  color: #003366; /* consistent heading color */
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+  color: #333;
 }
 
 .achievement-card ul {
@@ -244,27 +257,39 @@ p {
 
 .achievement-card li {
   margin-bottom: 0.5rem;
-  font-size: 1rem;
+  font-size: 0.95rem;
 }
 
 .achievement-card p {
-  font-size: 1rem;
+  font-size: 0.95rem;
   color: #444;
   line-height: 1.5;
 }
 
+/* Hover effect to match Skills */
+.achievement-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+  background-color: #cce6ff;
+}
+
 /* Mobile adjustments for achievements */
 @media (max-width: 768px) {
+  .section-banner {
+    font-size: 1rem;
+    padding: 15px;
+  }
+
   .achievement-card {
     padding: 1rem;
   }
 
   .achievement-card h2 {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 
   .achievement-card li,
   .achievement-card p {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
   }
 }
