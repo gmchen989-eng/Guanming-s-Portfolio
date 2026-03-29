@@ -64,52 +64,62 @@ header p,
   color: white;
 }
 
-/* Home Section cards */
-#home {
-  padding: 2rem 1rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-  max-width: 1000px;
-  margin: 0 auto;
+/* --- HOME SECTION FIX --- */
+.intro {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
 }
 
-.home-card {
-  background: white;
+/* Profile photo on the left */
+.profile-pic {
+  flex: 0 0 220px; /* fixed width column */
+}
+
+.profile-pic img {
+  width: 100%;
   border-radius: 8px;
-  padding: 20px;
-  text-align: center;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
-.home-card h2 {
-  font-size: 1.3em;
-  margin-bottom: 1rem;
+/* Text on the right */
+.statement {
+  flex: 1;
+}
+
+.statement h2 {
   color: #003366;
+  font-size: 1.6em;
+  margin-bottom: 15px;
   border: none;
 }
 
-.home-card p {
-  font-size: 0.95rem;
-  color: #444;
-  line-height: 1.6;
-  text-align: left;
-}
-
-/* Profile image inside card */
-.profile-img {
-  width: 180px;
-  border-radius: 8px;
+.statement p {
   margin-bottom: 15px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  line-height: 1.6;
+  color: #444;
 }
 
-/* Hover effect */
-.home-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 15px rgba(0,0,0,0.2);
-  background-color: #cce6ff;
+/* Responsive tweaks for Home */
+@media (max-width: 900px) {
+  .intro {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .profile-pic {
+    flex: none;
+    width: 180px;
+    margin-bottom: 20px;
+  }
+
+  .statement {
+    text-align: left;
+  }
 }
 
 /* Achievements Section cards */
@@ -155,13 +165,6 @@ header p,
 }
 
 /* Responsive tweaks */
-@media (max-width: 900px) {
-  #home,
-  #achievements {
-    grid-template-columns: 1fr;
-  }
-}
-
 @media (max-width: 768px) {
   header,
   .home-banner,
