@@ -19,13 +19,13 @@ nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: flex;           /* changed from inline-flex */
+  display: flex;           /* use flex instead of inline-flex */
   flex-wrap: wrap;         /* allow wrapping on small screens */
   justify-content: center; /* keep centered */
 }
 
 nav ul li {
-  margin: 0 15px;
+  margin: 8px 10px;        /* add vertical margin so wrapped rows have space */
 }
 
 nav a {
@@ -33,6 +33,7 @@ nav a {
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s ease;
+  font-size: 0.95em;       /* slightly smaller font for mobile */
 }
 
 nav a:hover {
@@ -55,14 +56,14 @@ header h1 {
 
 /* Section styling */
 section {
-  width: 100%;             /* responsive width */
-  max-width: 900px;        /* limit on large screens */
+  width: 100%;
+  max-width: 900px;
   margin: 30px auto;
   padding: 20px;
   background: white;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  box-sizing: border-box;  /* prevent overflow from padding */
+  box-sizing: border-box;
 }
 
 section h2 {
@@ -99,7 +100,7 @@ li {
 .testimonial-img {
   display: block;
   margin: 20px auto;
-  max-width: 100%;         /* scale to screen */
+  max-width: 100%;
   border: 1px solid #ddd;
   border-radius: 6px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
@@ -107,7 +108,7 @@ li {
 
 /* Certificate styling */
 .certificate {
-  max-width: 100%;         /* scale to screen */
+  max-width: 100%;
   display: block;
   margin: 20px auto;
   border: 1px solid #ccc;
@@ -141,7 +142,7 @@ p {
 .software-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 40px;               /* more breathing space */
+  gap: 40px;
   margin-top: 20px;
 }
 
@@ -181,7 +182,7 @@ p {
 .software-box:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 12px rgba(0,0,0,0.2);
-  background-color: #cce6ff; /* stronger blue tint */
+  background-color: #cce6ff;
 }
 
 .software-box:hover .details {
@@ -205,6 +206,10 @@ p {
 }
 
 @media (max-width: 600px) {
+  nav a {
+    font-size: 0.85em;   /* shrink nav text further on very small screens */
+  }
+
   .software-grid {
     grid-template-columns: 1fr;
   }
