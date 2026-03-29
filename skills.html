@@ -1,1 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skills & Software</title>
+  <style>
+    /* Basic reset */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f4f4f9;
+      color: #333;
+    }
 
+    /* Navigation bar */
+    nav {
+      background-color: #333;
+      padding: 10px 20px;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    nav ul li {
+      margin-right: 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #ffcc00;
+    }
+
+    /* Section headings */
+    h2 {
+      text-align: center;
+      margin-top: 30px;
+      color: #222;
+    }
+
+    /* Skills list */
+    #skills ul {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 0;
+      list-style: none;
+    }
+
+    #skills ul li {
+      background: white;
+      margin: 10px 0;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    /* Software grid */
+    .software-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+
+    .software-box {
+      background-color: white;
+      border-radius: 8px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      position: relative;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .software-box h3 {
+      margin: 0;
+      font-size: 1.1em;
+      color: #333;
+    }
+
+    .software-box .details {
+      display: none;
+      font-size: 0.9em;
+      color: #555;
+      margin-top: 10px;
+    }
+
+    .software-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+    }
+
+    .software-box:hover .details {
+      display: block;
+    }
+
+    /* Responsive tweak */
+    @media (max-width: 900px) {
+      .software-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .software-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="index.html">Home</a> |
+    <a href="achievements.html">Achievements</a> |
+    <a href="work.html">Work Experience</a> |
+    <a href="projects.html">Projects</a> |
+    <a href="leadership.html">Leadership & Service</a> |
+    <a href="awards.html">Awards</a> |
+    <a href="skills.html">Skills & Tools</a> |
+    <a href="testimonials.html">Testimonials</a>
+  </nav>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>Meticulous communication and adaptability</li>
+      <li>Analytical problem-solving and troubleshooting</li>
+      <li>Proactive planning and workflow optimization</li>
+      <li>Technical literacy in web design (HTML/CSS)</li>
+      <li>Data analysis and visualization</li>
+      <li>Resilient and persistent in overcoming challenges</li>
+    </ul>
+  </section>
+
+  <!-- Software Section -->
+  <section id="software">
+    <h2>Software Proficiency</h2>
+    <div class="software-grid">
+      <div class="software-box">
+        <h3>Power BI</h3>
+        <p class="details">Microsoft Power BI — A data visualization and business analytics tool that helps businesses transform raw data into interactive dashboards and actionable insights.</p>
+      </div>
+      <div class="software-box">
+        <h3>KNIME</h3>
+        <p class="details">KNIME — An open-source platform for data analytics, reporting, and integration, widely used for machine learning workflows.</p>
+      </div>
+      <div class="software-box">
+        <h3>Excel VBA</h3>
+        <p class="details">Microsoft Excel VBA — Enables automation of repetitive tasks and creation of custom functions within Excel spreadsheets.</p>
+      </div>
+      <div class="software-box">
+        <h3>UiPath</h3>
+        <p class="details">UiPath — A leading Robotic Process Automation (RPA) tool that automates business processes through software robots.</p>
+      </div>
+      <div class="software-box">
+        <h3>Python</h3>
+        <p class="details">Python — A versatile programming language used for data analysis, web development, and automation.</p>
+      </div>
+      <div class="software-box">
+        <h3>SQL</h3>
+        <p class="details">SQL — Structured Query Language for managing and querying relational databases.</p>
+      </div>
+      <div class="software-box">
+        <h3>SingTax</h3>
+        <p class="details">SingTax — A Singapore tax computation software used for preparing and filing tax returns.</p>
+      </div>
+      <div class="software-box">
+        <h3>Minitab</h3>
+        <p class="details">Minitab — A statistical software package used for data analysis, quality improvement, and Six Sigma projects.</p>
+      </div>
+      <div class="software-box">
+        <h3>ABSS Premier</h3>
+        <p class="details">ABSS Premier — An accounting software solution for managing business finances, payroll, and reporting.</p>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
