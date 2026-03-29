@@ -28,7 +28,6 @@ nav a:hover {
   text-decoration: underline;
 }
 
-
 /* Header */
 header {
   background: #4a69bd;
@@ -59,37 +58,50 @@ section h2 {
   margin-bottom: 15px;
 }
 
+section h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
 /* Lists */
 ul {
   list-style-type: square;
   padding-left: 20px;
 }
+
+li {
+  margin-bottom: 8px;
+}
+
+/* Reflection paragraphs */
 .reflection {
   margin-top: 15px;
   font-weight: 500;   /* semi-bold */
   font-style: italic; /* optional */
 }
+
+/* Testimonial images */
 .testimonial-img {
   display: block;
   margin: 20px auto;
-  max-width: 700px;   /* keeps it neat */
+  max-width: 700px;
   border: 1px solid #ddd;
   border-radius: 6px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
-li {
-  margin-bottom: 8px;
-}
+
 /* Certificate styling */
 .certificate {
-  max-width: 600px;        /* keeps it from being too wide */
-  display: block;          /* makes it sit on its own line */
-  margin: 20px auto;       /* centers it with spacing */
-  border: 1px solid #ccc;  /* neat border */
-  box-shadow: 2px 2px 8px rgba(0,0,0,0.1); /* subtle shadow */
-  border-radius: 6px;      /* slightly rounded corners */
+  max-width: 600px;
+  display: block;
+  margin: 20px auto;
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+  border-radius: 6px;
 }
 
+/* Intro section for Home page */
 .intro {
   display: flex;
   align-items: flex-start;
@@ -105,7 +117,20 @@ li {
 .statement {
   flex: 1;             /* text takes remaining space */
 }
+
 /* Paragraphs */
 p {
   margin-bottom: 15px;
+}
+
+/* Mobile-friendly tweak */
+@media (max-width: 768px) {
+  .intro {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile-pic img {
+    margin-bottom: 20px;
+  }
 }
