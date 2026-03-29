@@ -27,12 +27,20 @@ nav ul li {
 }
 
 nav ul li a {
-  color: white;             /* white text */
+  color: white;             /* default white text */
   text-decoration: none;    /* no underline */
   font-weight: bold;
   transition: color 0.3s ease;
 }
 
+/* Force visited/active states to stay white */
+nav ul li a:visited,
+nav ul li a:active {
+  color: white;
+  text-decoration: none;
+}
+
+/* Hover effect */
 nav ul li a:hover {
   color: #ffcc00;           /* gold hover */
   text-decoration: none;    /* prevent underline */
