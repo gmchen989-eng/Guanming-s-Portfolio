@@ -3,12 +3,12 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   background-color: #f4f4f9;
-  color: #333;
+  color: white; /*#333;
 }
 
 /* Navigation bar */
 nav {
-  background-color: white /*#333; /* dark bar */
+  background-color: #333; /* dark bar */
   padding: 15px 0;
   text-align: center;
 }
