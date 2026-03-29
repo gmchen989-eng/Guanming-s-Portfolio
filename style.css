@@ -8,36 +8,25 @@ body {
 
 /* Navigation bar */
 nav {
-  background-color: #333;
+  background-color: #333;   /* dark bar */
   padding: 15px 0;
   text-align: center;
 }
 
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-nav ul li {
-  margin: 0 15px;
-}
-
-nav ul li a {
-  color: white;
-  text-decoration: none;
+nav a {
+  color: white !important;             /* always white text */
+  text-decoration: none !important;    /* no underline */
   font-weight: bold;
+  margin: 0 10px;
   transition: color 0.3s ease;
 }
 
-nav ul li a:hover {
-  color: #ffcc00;
+nav a:hover {
+  color: #ffcc00 !important;           /* gold hover */
+  text-decoration: none !important;
 }
 
-/* Shared Banner Style (Skills, Achievements, Home) */
+/* Shared Banner Style (Skills, Achievements, Home, Awards) */
 header,
 .home-banner,
 .achievements-banner {
@@ -74,9 +63,8 @@ header p,
   padding: 0 20px;
 }
 
-/* Profile photo on the left */
 .profile-pic {
-  flex: 0 0 220px; /* fixed width column */
+  flex: 0 0 220px;
 }
 
 .profile-pic img {
@@ -85,7 +73,6 @@ header p,
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
-/* Text on the right */
 .statement {
   flex: 1;
 }
@@ -122,7 +109,7 @@ header p,
   }
 }
 
-/* Achievements Section cards (unchanged) */
+/* Achievements Section cards */
 #achievements {
   padding: 2rem 1rem;
   display: grid;
@@ -159,6 +146,50 @@ header p,
 }
 
 .achievement-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+  background-color: #cce6ff;
+}
+
+/* Awards & Certificates Grid */
+.award-grid, .certificate-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.award-card, .certificate-card {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.award-card h3, .certificate-card h3 {
+  font-size: 1.1em;
+  margin-bottom: 0.8rem;
+  color: #003366;
+  border: none;
+}
+
+.award-card p, .certificate-card p {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.5;
+}
+
+.award-card img, .certificate-card img {
+  max-width: 100%;
+  border-radius: 6px;
+  margin: 10px 0;
+}
+
+.award-card:hover, .certificate-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 10px 15px rgba(0,0,0,0.2);
   background-color: #cce6ff;
