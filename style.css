@@ -37,25 +37,9 @@ nav ul li a:hover {
   color: #ffcc00;
 }
 
-/* Skills Banner */
-header {
-  background: linear-gradient(to right, #0066cc, #003366);
-  color: white;
-  text-align: center;
-  padding: 60px 20px;
-}
-
-header h1 {
-  margin: 0;
-  font-size: 2.5em;
-}
-
-header p {
-  margin-top: 10px;
-  font-size: 1.2em;
-}
-
-/* Achievements Banner (same style as Skills) */
+/* Shared Banner Style (Skills, Achievements, Home) */
+header,
+.home-banner,
 .achievements-banner {
   background: linear-gradient(to right, #0066cc, #003366);
   color: white;
@@ -63,17 +47,72 @@ header p {
   padding: 60px 20px;
 }
 
+header h1,
+.home-banner h1,
 .achievements-banner h1 {
   margin: 0;
   font-size: 2.5em;
+  color: white;
+  border: none;
 }
 
+header p,
+.home-banner p,
 .achievements-banner p {
   margin-top: 10px;
   font-size: 1.2em;
+  color: white;
 }
 
-/* Achievements Section Cards */
+/* Home Section cards */
+#home {
+  padding: 2rem 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.home-card {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.home-card h2 {
+  font-size: 1.3em;
+  margin-bottom: 1rem;
+  color: #003366;
+  border: none;
+}
+
+.home-card p {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.6;
+  text-align: left;
+}
+
+/* Profile image inside card */
+.profile-img {
+  width: 180px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Hover effect */
+.home-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+  background-color: #cce6ff;
+}
+
+/* Achievements Section cards */
 #achievements {
   padding: 2rem 1rem;
   display: grid;
@@ -96,6 +135,7 @@ header p {
   font-size: 1.1em;
   margin-bottom: 0.8rem;
   color: #003366;
+  border: none;
 }
 
 .achievement-card ul,
@@ -108,7 +148,6 @@ header p {
   max-width: 90%;
 }
 
-/* Hover effect */
 .achievement-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 10px 15px rgba(0,0,0,0.2);
@@ -117,13 +156,22 @@ header p {
 
 /* Responsive tweaks */
 @media (max-width: 900px) {
+  #home,
   #achievements {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
   }
 }
 
-@media (max-width: 600px) {
-  #achievements {
-    grid-template-columns: 1fr;
+@media (max-width: 768px) {
+  header,
+  .home-banner,
+  .achievements-banner {
+    padding: 40px 15px;
+  }
+
+  header h1,
+  .home-banner h1,
+  .achievements-banner h1 {
+    font-size: 2em;
   }
 }
