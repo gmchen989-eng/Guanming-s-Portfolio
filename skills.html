@@ -23,7 +23,9 @@
       list-style: none;
       margin: 0;
       padding: 0;
-      display: inline-flex;
+      display: flex;           /* changed from inline-flex */
+      flex-wrap: wrap;         /* allow wrapping on small screens */
+      justify-content: center; /* keep centered */
     }
 
     nav ul li {
