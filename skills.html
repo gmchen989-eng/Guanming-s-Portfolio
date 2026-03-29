@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Skills & Software</title>
+  <title>Skills & Tools</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -23,6 +23,7 @@
       margin: 0;
       padding: 0;
       display: flex;
+      flex-wrap: wrap;
     }
 
     nav ul li {
@@ -40,9 +41,9 @@
       color: #ffcc00;
     }
 
-    /* Page header (hero style) */
+    /* Page header (hero style, consistent color scheme) */
     header {
-      background: linear-gradient(to right, #4a90e2, #0073e6);
+      background: linear-gradient(to right, #0066cc, #003366); /* Adjust to match your other pages */
       color: white;
       text-align: center;
       padding: 60px 20px;
@@ -74,7 +75,7 @@
     }
 
     #skills ul li {
-      background: white;
+      background: #e6f2ff; /* light blue */
       margin: 10px 0;
       padding: 15px;
       border-radius: 8px;
@@ -92,32 +93,33 @@
     }
 
     .software-box {
-      background-color: white;
+      background-color: #e6f2ff; /* light blue */
       border-radius: 8px;
       padding: 20px;
       text-align: center;
       box-shadow: 0 4px 6px rgba(0,0,0,0.1);
       position: relative;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
       cursor: pointer;
     }
 
     .software-box h3 {
       margin: 0;
       font-size: 1.1em;
-      color: #333;
+      color: #003366;
     }
 
     .software-box .details {
       display: none;
       font-size: 0.9em;
-      color: #555;
+      color: #333;
       margin-top: 10px;
     }
 
     .software-box:hover {
       transform: translateY(-5px);
       box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+      background-color: #cce6ff; /* slightly darker blue on hover */
     }
 
     .software-box:hover .details {
@@ -144,16 +146,19 @@
   <nav>
     <ul>
       <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="skills.html">Skills</a></li>
-      <li><a href="portfolio.html">Portfolio</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="achievements.html">Achievements</a></li>
+      <li><a href="work_experience.html">Work Experience</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="leadership.html">Leadership & Service</a></li>
+      <li><a href="awards.html">Awards & Certifications</a></li>
+      <li><a href="skills.html">Skills & Tools</a></li>
+      <li><a href="testimonials.html">Testimonials</a></li>
     </ul>
   </nav>
 
   <!-- Page Header -->
   <header>
-    <h1>My Skills & Software Proficiency</h1>
+    <h1>Skills & Tools</h1>
     <p>Showcasing the technical tools and transferable skills I developed during my Polytechnic studies</p>
   </header>
 
