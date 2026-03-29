@@ -12,14 +12,16 @@ body {
 nav {
   background-color: #2a4365;
   padding: 12px;
-  text-align: center; /* center align nav */
+  text-align: center;
 }
 
 nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: inline-flex; /* keeps items centered */
+  display: inline-flex;
+  flex-wrap: wrap;        /* allow wrapping on small screens */
+  justify-content: center; /* keep centered */
 }
 
 nav ul li {
@@ -53,12 +55,14 @@ header h1 {
 
 /* Section styling */
 section {
-  max-width: 900px;
+  width: 100%;             /* responsive width */
+  max-width: 900px;        /* limit on large screens */
   margin: 30px auto;
   padding: 20px;
   background: white;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-sizing: border-box;  /* prevent overflow from padding */
 }
 
 section h2 {
@@ -87,8 +91,8 @@ li {
 /* Reflection paragraphs */
 .reflection {
   margin-top: 15px;
-  font-weight: 500;   /* semi-bold */
-  font-style: italic; /* optional */
+  font-weight: 500;
+  font-style: italic;
 }
 
 /* Testimonial images */
@@ -120,12 +124,12 @@ li {
 }
 
 .profile-pic img {
-  width: 180px;        /* adjust size */
-  border-radius: 8px;  /* optional rounded corners */
+  width: 180px;
+  border-radius: 8px;
 }
 
 .statement {
-  flex: 1;             /* text takes remaining space */
+  flex: 1;
 }
 
 /* Paragraphs */
@@ -137,8 +141,8 @@ p {
 .software-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 40px; /* increased gap for breathing space */
-  margin-top: 30px;
+  gap: 40px;               /* more breathing space */
+  margin-top: 20px;
 }
 
 .software-box {
@@ -150,7 +154,7 @@ p {
   position: relative;
   transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
   cursor: pointer;
-  min-height: 260px; /* fixed size for consistency */
+  min-height: 260px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -171,21 +175,21 @@ p {
   display: none;
   font-size: 0.9em;
   color: #555;
-  margin-top: 15px;
+  margin-top: 10px;
 }
 
 .software-box:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 15px rgba(0,0,0,0.2);
-  background-color: #f9fbff; /* subtle tint */
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+  background-color: #cce6ff; /* stronger blue tint */
 }
 
 .software-box:hover .details {
   display: block;
 }
 
-/* Mobile-friendly tweak */
-@media (max-width: 768px) {
+/* Mobile-friendly tweaks */
+@media (max-width: 900px) {
   .intro {
     flex-direction: column;
     align-items: center;
@@ -200,7 +204,7 @@ p {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
   .software-grid {
     grid-template-columns: 1fr;
   }
