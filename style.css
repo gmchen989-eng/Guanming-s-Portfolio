@@ -26,8 +26,9 @@ nav ul li {
   margin: 0 15px;
 }
 
-/* Force all link states to be white, non-underlined */
+/* Force all link states to match Achievements style */
 nav ul li a,
+nav ul li a:link,
 nav ul li a:visited,
 nav ul li a:active,
 nav ul li a:focus {
