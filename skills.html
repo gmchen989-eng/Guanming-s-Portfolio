@@ -27,7 +27,7 @@
     }
 
     nav ul li {
-      margin-right: 60px;
+      margin-right: 20px;
     }
 
     nav ul li a {
@@ -41,9 +41,9 @@
       color: #ffcc00;
     }
 
-    /* Page header (hero style, consistent color scheme) */
+    /* Page header */
     header {
-      background: linear-gradient(to right, #0066cc, #003366); /* Adjust to match your other pages */
+      background: linear-gradient(to right, #0066cc, #003366);
       color: white;
       text-align: center;
       padding: 60px 20px;
@@ -75,7 +75,7 @@
     }
 
     #skills ul li {
-      background: #e6f2ff; /* light blue */
+      background: #e6f2ff;
       margin: 10px 0;
       padding: 15px;
       border-radius: 8px;
@@ -87,20 +87,28 @@
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 20px;
-      max-width: 1000px;
+      max-width: 1200px;
       margin: 30px auto;
       padding: 0 20px;
     }
 
     .software-box {
-      background-color: #e6f2ff; /* light blue */
+      background-color: #e6f2ff;
       border-radius: 8px;
       padding: 20px;
       text-align: center;
       box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      position: relative;
       transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
       cursor: pointer;
+      min-height: 220px; /* fixed size */
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .software-box img {
+      max-width: 60px;
+      margin: 0 auto 10px;
     }
 
     .software-box h3 {
@@ -119,7 +127,7 @@
     .software-box:hover {
       transform: translateY(-5px);
       box-shadow: 0 8px 12px rgba(0,0,0,0.2);
-      background-color: #cce6ff; /* slightly darker blue on hover */
+      background-color: #cce6ff;
     }
 
     .software-box:hover .details {
@@ -147,7 +155,7 @@
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="achievements.html">Achievements</a></li>
-      <li><a href="work_experience.html">Work Experience</a></li>
+      <li><a href="work.html">Work Experience</a></li>
       <li><a href="projects.html">Projects</a></li>
       <li><a href="leadership.html">Leadership & Service</a></li>
       <li><a href="awards.html">Awards & Certifications</a></li>
@@ -179,44 +187,53 @@
   <section id="software">
     <h2>Software Proficiency</h2>
     <div class="software-grid">
+      <!-- Example: Power BI -->
       <div class="software-box">
+        <img src="images/powerbi.png" alt="Power BI Logo">
         <h3>Power BI</h3>
         <p class="details">Microsoft Power BI — A data visualization and business analytics tool that helps businesses transform raw data into interactive dashboards and actionable insights.</p>
       </div>
       <div class="software-box">
+        <img src="images/knime.png" alt="KNIME Logo">
         <h3>KNIME</h3>
         <p class="details">KNIME — An open-source platform for data analytics, reporting, and integration, widely used for machine learning workflows.</p>
       </div>
       <div class="software-box">
+        <img src="images/excel.png" alt="Excel VBA Logo">
         <h3>Excel VBA</h3>
         <p class="details">Microsoft Excel VBA — Enables automation of repetitive tasks and creation of custom functions within Excel spreadsheets.</p>
       </div>
       <div class="software-box">
+        <img src="images/uipath.png" alt="UiPath Logo">
         <h3>UiPath</h3>
         <p class="details">UiPath — A leading Robotic Process Automation (RPA) tool that automates business processes through software robots.</p>
       </div>
       <div class="software-box">
+        <img src="images/python.png" alt="Python Logo">
         <h3>Python</h3>
         <p class="details">Python — A versatile programming language used for data analysis, web development, and automation.</p>
       </div>
       <div class="software-box">
+        <img src="images/sql.png" alt="SQL Logo">
         <h3>SQL</h3>
         <p class="details">SQL — Structured Query Language for managing and querying relational databases.</p>
       </div>
       <div class="software-box">
+        <img src="images/singtax.png" alt="SingTax Logo">
         <h3>SingTax</h3>
         <p class="details">SingTax — A Singapore tax computation software used for preparing and filing tax returns.</p>
       </div>
       <div class="software-box">
+        <img src="images/minitab.png" alt="Minitab Logo">
         <h3>Minitab</h3>
         <p class="details">Minitab — A statistical software package used for data analysis, quality improvement, and Six Sigma projects.</p>
       </div>
       <div class="software-box">
+        <img src="images/abss.png" alt="ABSS Premier Logo">
         <h3>ABSS Premier</h3>
         <p class="details">ABSS Premier — An accounting software solution for managing business finances, payroll, and reporting.</p>
       </div>
-    </div>
-  </section>
-
-</body>
-</html>
+      <div class="software-box">
+        <img src="images/canva.png" alt="Canva Logo">
+        <h3>Canva</h3>
+        <p class="details">Canva — A graphic design platform used to create social media graphics, presentations, posters, and other visual content.</p
