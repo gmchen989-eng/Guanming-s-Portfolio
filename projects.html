@@ -3,6 +3,56 @@
 <head>
   <title>Projects - Guanming</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Shared timeline base */
+    .timeline {
+      position: relative;
+      margin: 40px 0;
+      height: 150px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      border-top: 3px solid;
+    }
+    .timeline .milestone {
+      flex: 1;
+      text-align: center;
+      position: relative;
+      cursor: pointer;
+    }
+    .timeline .milestone span {
+      position: absolute;
+      top: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+    }
+    .timeline .milestone p {
+      margin-top: 30px;
+      font-weight: bold;
+    }
+    /* Fade animation */
+    .timeline .details {
+      display: none;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+    .timeline .details.show {
+      display: block;
+      opacity: 1;
+    }
+    /* Project-specific colors */
+    #timeline-client { border-color: #0066cc; }
+    #timeline-client .milestone span { background: #0066cc; }
+
+    #timeline-enterprise { border-color: #28a745; }
+    #timeline-enterprise .milestone span { background: #28a745; }
+
+    #timeline-entrepreneurship { border-color: #8B4513; }
+    #timeline-entrepreneurship .milestone span { background: #8B4513; }
+  </style>
 </head>
 <body>
   <!-- Navigation -->
@@ -112,52 +162,4 @@
       </div>
 
       <img src="images/entrepreneurship-gallery.jpg" alt="Entrepreneurship Prototype"
-           style="display:block; margin:0 auto; max-width:80%; height:auto; border-radius:6px; box-shadow:0 4px 6px rgba(0,0,0,0.1);">
-    </div>
-  </main>
-
-  <!-- Timeline Script -->
-  <script>
-    // Toggle milestones open/close for all timelines
-    document.querySelectorAll('.milestone').forEach((milestone) => {
-      milestone.addEventListener('click', () => {
-        const details = milestone.querySelector('.details');
-        if (!details) return;
-        const isVisible = details.style.display === 'block';
-        // Collapse all details across all timelines
-        document.querySelectorAll('.details').forEach(d => d.style.display = 'none');
-        // Toggle current
-        details.style.display = isVisible ? 'none' : 'block';
-      });
-    });
-  </script>
-
-  <!-- Timeline styling -->
-  <style>
-    .timeline {
-      position: relative;
-      margin: 40px 0;
-      height: 150px;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      border-top: 3px solid #0066cc;
-    }
-    .timeline .milestone {
-      flex: 1;
-      text-align: center;
-      position: relative;
-      cursor: pointer;
-    }
-    .timeline .milestone span {
-      position: absolute;
-      top: -10px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 20px;
-      height: 20px;
-      background: #0066cc;
-      border-radius: 50%;
-    }
-    .timeline .milestone p {
-      margin
+           style="display:block; margin:0 auto; max-width:80%; height:auto; border-radius:
