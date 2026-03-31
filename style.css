@@ -4,7 +4,8 @@ body {
   margin: 0;
   background-color: #f4f4f9;
   color: #333;
-  padding-top: 70px; /* prevent content hiding behind fixed nav */
+  /* Adjust this to match nav height exactly */
+  padding-top: 60px; /* nav bar height compensation */
 }
 
 /* Navigation bar */
