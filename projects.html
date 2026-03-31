@@ -4,7 +4,7 @@
   <title>Projects - Guanming</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    /* Shared timeline base */
+    /* --- Timeline Styling --- */
     .timeline {
       position: relative;
       margin: 40px 0;
@@ -33,15 +33,17 @@
       margin-top: 30px;
       font-weight: bold;
     }
-    /* Fade animation */
+    /* Fade + slide animation */
     .timeline .details {
       display: none;
       opacity: 0;
-      transition: opacity 0.4s ease;
+      transform: translateY(10px);
+      transition: opacity 0.4s ease, transform 0.4s ease;
     }
     .timeline .details.show {
       display: block;
       opacity: 1;
+      transform: translateY(0);
     }
     /* Project-specific colors */
     #timeline-client { border-color: #0066cc; }
@@ -99,10 +101,6 @@
         <div class="milestone"><span></span><p>June 2025</p><div class="details"><p>Robot Deployment – Automated invoice creation, reminders, and calendar integration.</p></div></div>
         <div class="milestone"><span></span><p>Aug 2025</p><div class="details"><p>Final Presentation – Delivered promotional video and infographic at SP showcase.</p></div></div>
       </div>
-
-      <img src="certs/Letter%20of%20Commendation%20from%20StarsBridge%20Accounting.jpg"
-           alt="Letter of Commendation from StarsBridge Accounting"
-           style="display:block; margin:0 auto; max-width:80%; height:auto; border-radius:6px; box-shadow:0 4px 6px rgba(0,0,0,0.1);">
     </div>
 
     <!-- Enterprise Innovation -->
@@ -127,13 +125,6 @@
         <div class="milestone"><span></span><p>June 2025</p><div class="details"><p>Presentation to Lecturers – Shared prototypes and event concepts.</p></div></div>
         <div class="milestone"><span></span><p>Aug 2025</p><div class="details"><p>Final Presentation – Delivered prototypes to lecturers and client.</p></div></div>
       </div>
-
-      <img src="images/pop-poster.jpg" alt="Pop-Up Event Poster"
-           style="display:block; margin:0 auto; max-width:80%; height:auto;">
-      <img src="images/prog-sheet.jpg" alt="Programme Sheet of Pop-Up Event"
-           style="display:block; margin:20px auto; max-width:80%; height:auto;">
-      <img src="images/3D-Model.jpg" alt="3D Model of Pop-Up Event"
-           style="display:block; margin:20px auto; max-width:80%; height:auto;">
     </div>
 
     <!-- Entrepreneurship Project -->
@@ -160,6 +151,23 @@
         <div class="milestone"><span></span><p>Jan 2024</p><div class="details"><p>Gallery Walk – Showcased prototypes to visitors at SP.</p></div></div>
         <div class="milestone"><span></span><p>Feb 2024</p><div class="details"><p>Second Presentation – Presented final prototype to lecturers.</p></div></div>
       </div>
+    </div>
+  </main>
 
-      <img src="images/entrepreneurship-gallery.jpg" alt="Entrepreneurship Prototype"
-           style="display:block; margin:0 auto; max-width:80%; height:auto; border-radius:
+  <!-- Timeline Script -->
+  <script>
+    // Toggle milestones open/close with fade + slide animation
+    document.querySelectorAll('.milestone').forEach((milestone) => {
+      milestone.addEventListener('click', () => {
+        const details = milestone.querySelector('.details');
+        if (!details) return;
+        const isVisible = details.classList.contains('show');
+        // Collapse all details
+        document.querySelectorAll('.details').forEach(d => d.classList.remove('show'));
+        // Toggle current
+        if (!isVisible) details.classList.add('show');
+      });
+    });
+  </script>
+</body>
+</html>
