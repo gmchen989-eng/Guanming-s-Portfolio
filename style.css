@@ -7,17 +7,22 @@ body {
   padding-top: var(--nav-height, 45px); /* offset content by nav height */
 }
 
+/* Extra offset for Skills page only */
+body.skills-page {
+  padding-top: 70px; /* ensures Skills header clears the fixed nav */
+}
+
 /* Navigation bar */
 nav {
-  --nav-height: 45px;       /* define nav height once */
-  background-color: #333;   /* dark bar */
-  padding: 10px 0;          /* slimmer padding */
+  --nav-height: 45px;
+  background-color: #333;
+  padding: 10px 0;
   text-align: center;
-  position: fixed;          /* keep nav fixed at top */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000;            /* keep above other content */
+  z-index: 1000;
   height: var(--nav-height);
 }
 
@@ -25,10 +30,10 @@ nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: flex !important;          /* horizontal layout */
+  display: flex !important;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 25px;                         /* consistent spacing between items */
+  gap: 25px;
 }
 
 nav ul li {
@@ -36,32 +41,32 @@ nav ul li {
 }
 
 nav a {
-  color: white !important;             /* always white text */
-  text-decoration: none !important;    /* no underline */
+  color: white !important;
+  text-decoration: none !important;
   font-weight: bold;
   transition: color 0.3s ease;
 }
 
 nav a:hover {
-  color: #ffcc00 !important;           /* gold hover */
+  color: #ffcc00 !important;
   text-decoration: none !important;
 }
 
-/* Shared Banner Style (Home, Skills, Achievements, Awards) */
+/* Shared Banner Style */
 header,
 .home-banner,
 .achievements-banner,
-.skills-banner {   /* added skills-banner */
+.skills-banner {
   background: linear-gradient(to right, #0066cc, #003366);
   color: white;
   text-align: center;
-  padding: 60px 20px; /* same thickness as Home */
+  padding: 60px 20px;
 }
 
 header h1,
 .home-banner h1,
 .achievements-banner h1,
-.skills-banner h1 {   /* added skills-banner */
+.skills-banner h1 {
   margin: 0;
   font-size: 2.5em;
   color: white;
@@ -71,255 +76,89 @@ header h1,
 header p,
 .home-banner p,
 .achievements-banner p,
-.skills-banner p {   /* added skills-banner */
+.skills-banner p {
   margin-top: 10px;
   font-size: 1.2em;
   color: white;
 }
 
-/* --- HOME SECTION FIX --- */
-.intro {
-  display: flex;
-  align-items: flex-start;
-  gap: 30px;
+/* Skills Section */
+#skills ul {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 0;
+  list-style: none;
+}
+
+#skills ul li {
+  background: white;
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Software grid */
+.software-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
   max-width: 1200px;
   margin: 40px auto;
   padding: 0 20px;
 }
 
-.profile-pic {
-  flex: 0 0 220px;
-}
-
-.profile-pic img {
-  width: 100%;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-
-.statement {
-  flex: 1;
-}
-
-.statement h2 {
-  color: #003366;
-  font-size: 1.6em;
-  margin-bottom: 15px;
-  border: none;
-}
-
-.statement p {
-  margin-bottom: 15px;
-  line-height: 1.6;
-  color: #444;
-}
-
-/* Responsive tweaks for Home */
-@media (max-width: 900px) {
-  .intro {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .profile-pic {
-    flex: none;
-    width: 180px;
-    margin-bottom: 20px;
-  }
-
-  .statement {
-    text-align: left;
-  }
-}
-
-/* Achievements Section cards */
-#achievements {
-  padding: 2rem 1rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.5rem;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.achievement-card {
-  background: white;
+.software-box {
+  background-color: white;
   border-radius: 8px;
   padding: 20px;
   text-align: center;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-}
-
-.achievement-card h2 {
-  font-size: 1.1em;
-  margin-bottom: 0.8rem;
-  color: #003366;
-  border: none;
-}
-
-.achievement-card ul,
-.achievement-card p {
-  font-size: 0.95rem;
-  color: #444;
-  line-height: 1.5;
-  margin: 0 auto;
-  text-align: left;
-  max-width: 90%;
-}
-
-.achievement-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 15px rgba(0,0,0,0.2);
-  background-color: #cce6ff;
-}
-
-/* Awards & Certificates Grid */
-.award-grid, .certificate-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.5rem;
-  max-width: 1000px;
-  margin: 2rem auto;
-  padding: 0 1rem;
-}
-
-.award-card, .certificate-card {
-  background: white;
-  border-radius: 8px;
-  padding: 20px;
-  text-align: center;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-}
-
-.award-card h3, .certificate-card h3 {
-  font-size: 1.1em;
-  margin-bottom: 0.8rem;
-  color: #003366;
-  border: none;
-}
-
-.award-card p, .certificate-card p {
-  font-size: 0.95rem;
-  color: #444;
-  line-height: 1.5;
-}
-
-.award-card img, .certificate-card img {
-  max-width: 100%;
-  border-radius: 6px;
-  margin: 10px 0;
-}
-
-.award-card:hover, .certificate-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 15px rgba(0,0,0,0.2);
-  background-color: #cce6ff;
-}
-
-/* Responsive tweaks */
-@media (max-width: 768px) {
-  header,
-  .home-banner,
-  .achievements-banner,
-  .skills-banner {   /* added skills-banner */
-    padding: 40px 15px;
-  }
-
-  header h1,
-  .home-banner h1,
-  .achievements-banner h1,
-  .skills-banner h1 {   /* added skills-banner */
-    font-size: 2em;
-  }
-}
-
-/* --- Projects Page Override --- */
-#projects-page .achievement-card:hover {
-  background-color: white !important;
-  transform: none !important;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1) !important;
-}
-
-/* --- Timeline Styling --- */
-.timeline {
-  position: relative;
-  margin: 40px 0;
-  height: 150px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  border-top: 3px solid #0066cc;
-}
-
-.timeline .milestone {
-  flex: 1;
-  text-align: center;
-  position: relative;
   cursor: pointer;
+  min-height: 260px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
-.timeline .milestone span {
-  position: absolute;
-  top: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 20px;
-  height: 20px;
-  background: #0066cc;
-  border-radius: 50%;
+.software-box img {
+  max-width: 60px;
+  margin: 0 auto 10px;
 }
 
-.timeline .milestone p {
-  margin-top: 30px;
-  font-weight: bold;
+.software-box h3 {
+  margin: 0;
+  font-size: 1.1em;
+  color: #003366;
 }
 
-/* Details hidden by default, fade + slide when shown */
-.timeline .details {
+.software-box .details {
   display: none;
-  opacity: 0;
-  transform: translateY(10px);
-  transition: opacity 0.4s ease, transform 0.4s ease;
-  margin-top: 8px;
+  font-size: 0.9em;
+  color: #333;
+  margin-top: 15px;
 }
 
-.timeline .details.show {
+.software-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+  background-color: #cce6ff;
+}
+
+.software-box:hover .details {
   display: block;
-  opacity: 1;
-  transform: translateY(0);
 }
 
-/* --- Responsive Timeline Fix for Mobile --- */
+/* Responsive tweak for Skills */
+@media (max-width: 900px) {
+  .software-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 600px) {
-  .timeline {
-    flex-direction: column;
-    height: auto;
-    border-top: none;
-    border-left: 3px solid #0066cc;
-    align-items: flex-start;
-    padding-left: 20px;
+  .software-grid {
+    grid-template-columns: 1fr;
   }
-
-  .timeline .milestone {
-    text-align: left;
-    margin-bottom: 20px;
-  }
-
-  .timeline .milestone span {
-    left: -30px;
-    top: 0;
-    transform: none;
-  }
-
-  .timeline .milestone p {
-    margin-top: 0;
-    font-weight: bold;
-  }
-  /* Extra offset for Skills page only */
-body.skills-page {
-  padding-top: 70px; /* ensures Skills header clears the fixed nav */
-}
 }
