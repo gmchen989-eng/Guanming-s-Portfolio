@@ -229,3 +229,52 @@ header p,
   transform: none !important;         /* no lift */
   box-shadow: 0 4px 6px rgba(0,0,0,0.1) !important; /* normal shadow only */
 }
+
+/* --- Timeline Styling --- */
+.timeline {
+  position: relative;
+  margin: 40px 0;
+  height: 150px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-top: 3px solid #0066cc;
+}
+
+.timeline .milestone {
+  flex: 1;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.timeline .milestone span {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+  background: #0066cc;
+  border-radius: 50%;
+}
+
+.timeline .milestone p {
+  margin-top: 30px;
+  font-weight: bold;
+}
+
+/* Details hidden by default, fade + slide when shown */
+.timeline .details {
+  display: none;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  margin-top: 8px; /* subtle gap between date and text */
+}
+
+.timeline .details.show {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
