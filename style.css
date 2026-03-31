@@ -225,7 +225,7 @@ header p,
 
 /* --- Projects Page Override --- */
 #projects-page .achievement-card:hover {
-  background-color: white; /* keep background white */
-  transform: none;         /* no lift */
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* normal shadow only */
+  background-color: white !important; /* keep background white */
+  transform: none !important;         /* no lift */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1) !important; /* normal shadow only */
 }
