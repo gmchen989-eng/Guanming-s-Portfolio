@@ -278,3 +278,31 @@ header p,
   opacity: 1;
   transform: translateY(0);
 }
+
+/* --- Responsive Timeline Fix for Mobile --- */
+@media (max-width: 600px) {
+  .timeline {
+    flex-direction: column;       /* stack milestones vertically */
+    height: auto;                 /* let height grow naturally */
+    border-top: none;             /* remove horizontal line */
+    border-left: 3px solid #0066cc; /* vertical line instead */
+    align-items: flex-start;
+    padding-left: 20px;
+  }
+
+  .timeline .milestone {
+    text-align: left;
+    margin-bottom: 20px;          /* spacing between milestones */
+  }
+
+  .timeline .milestone span {
+    left: -30px;                  /* position dot on the vertical line */
+    top: 0;
+    transform: none;
+  }
+
+  .timeline .milestone p {
+    margin-top: 0;
+    font-weight: bold;
+  }
+}
