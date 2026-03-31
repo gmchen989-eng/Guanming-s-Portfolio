@@ -222,3 +222,10 @@ header p,
     font-size: 2em;
   }
 }
+
+/* --- Projects Page Override --- */
+#projects-page .achievement-card:hover {
+  background-color: white; /* keep background white */
+  transform: none;         /* no lift */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* normal shadow only */
+}
