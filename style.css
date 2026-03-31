@@ -4,21 +4,20 @@ body {
   margin: 0;
   background-color: #f4f4f9;
   color: #333;
-  /* Use nav height to offset content */
-  padding-top: var(--nav-height, 60px);
+  padding-top: var(--nav-height, 45px); /* offset content by nav height */
 }
 
 /* Navigation bar */
 nav {
-  --nav-height: 60px;     /* define nav height once */
-  background-color: #333; /* dark bar */
-  padding: 15px 0;
+  --nav-height: 45px;       /* define nav height once */
+  background-color: #333;   /* dark bar */
+  padding: 10px 0;          /* slimmer padding */
   text-align: center;
-  position: fixed;        /* keep nav fixed at top */
+  position: fixed;          /* keep nav fixed at top */
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000;          /* keep above other content */
+  z-index: 1000;            /* keep above other content */
   height: var(--nav-height);
 }
 
@@ -306,4 +305,12 @@ header p,
 
   .timeline .milestone span {
     left: -30px;                  /* position dot on the vertical line */
-    top: 0
+    top: 0;
+    transform: none;
+  }
+
+  .timeline .milestone p {
+    margin-top: 0;
+    font-weight: bold;
+  }
+}
