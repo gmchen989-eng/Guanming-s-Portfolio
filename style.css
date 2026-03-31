@@ -4,7 +4,7 @@ body {
   margin: 0;
   background-color: #f4f4f9;
   color: #333;
-  padding-top: var(--nav-height, 45px); /* offset content by nav height */
+  padding-top: var(--nav-height, 42px); /* offset content by nav height */
 }
 
 /* Navigation bar */
