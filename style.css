@@ -4,7 +4,7 @@ body {
   margin: 0;
   background-color: #f4f4f9;
   color: #333;
-  /* removed padding-top here */
+  padding-top: var(--nav-height, 45px); /* offset content by nav height */
 }
 
 /* Navigation bar */
@@ -19,9 +19,6 @@ nav {
   width: 100%;
   z-index: 1000;            /* keep above other content */
   height: var(--nav-height);
-
-  /* NEW: create space below nav so header clears it */
-  margin-bottom: 60px;
 }
 
 nav ul {
@@ -304,4 +301,25 @@ header p,
     border-left: 3px solid #0066cc;
     align-items: flex-start;
     padding-left: 20px;
- 
+  }
+
+  .timeline .milestone {
+    text-align: left;
+    margin-bottom: 20px;
+  }
+
+  .timeline .milestone span {
+    left: -30px;
+    top: 0;
+    transform: none;
+  }
+
+  .timeline .milestone p {
+    margin-top: 0;
+    font-weight: bold;
+  }
+}
+/* Extra offset for Skills page only */
+body.skills-page {
+  padding-top: 60px !important; /* force override */
+}
