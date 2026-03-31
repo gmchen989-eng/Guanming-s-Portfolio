@@ -4,9 +4,153 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Skills & Tools</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f4f4f9;
+      color: #333;
+    }
+
+    /* Navigation bar */
+    nav {
+      background-color: #333;
+      padding: 15px 0;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;           /* changed from inline-flex */
+      flex-wrap: wrap;         /* allow wrapping on small screens */
+      justify-content: center; /* keep centered */
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #ffcc00;
+    }
+
+    /* Page header */
+    header {
+      background: linear-gradient(to right, #0066cc, #003366);
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 1.2em;
+    }
+
+    /* Section headings */
+    h2 {
+      text-align: center;
+      margin-top: 40px;
+      color: #222;
+    }
+
+    /* Skills list */
+    #skills ul {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 0;
+      list-style: none;
+    }
+
+    #skills ul li {
+      background: white;
+      margin: 10px 0;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    /* Software grid */
+    .software-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 40px;
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .software-box {
+      background-color: white;
+      border-radius: 8px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+      cursor: pointer;
+      min-height: 260px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    .software-box img {
+      max-width: 60px;
+      margin: 0 auto 10px;
+    }
+
+    .software-box h3 {
+      margin: 0;
+      font-size: 1.1em;
+      color: #003366;
+    }
+
+    .software-box .details {
+      display: none;
+      font-size: 0.9em;
+      color: #333;
+      margin-top: 15px;
+    }
+
+    .software-box:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+      background-color: #cce6ff; /* stronger blue tint */
+    }
+
+    .software-box:hover .details {
+      display: block;
+    }
+
+    /* Responsive tweak */
+    @media (max-width: 900px) {
+      .software-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .software-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
-<body class="skills-page">
+<body>
 
   <!-- Navigation -->
   <nav>
@@ -23,7 +167,7 @@
   </nav>
 
   <!-- Page Header -->
-  <header class="skills-banner">
+  <header>
     <h1>Skills & Tools</h1>
     <p>Showcasing the technical tools and transferable skills I developed during my Polytechnic studies</p>
   </header>
@@ -51,12 +195,80 @@
     </ul>
   </section>
 
-  <!-- Software Section -->
+ <!-- Software Section -->
   <section id="software">
     <h2>Software Proficiency</h2>
     <div class="software-grid">
-      <!-- keep all your software-box items here exactly as you had them -->
-      <!-- ... -->
+      <div class="software-box">
+        <img src="images/Xero.png" alt="Xero Logo">
+        <h3>Xero</h3>
+        <p class="details">Xero — I had a regular hands-on learning experience with using Xero during my Accounting Internship at RSM. I am confident with data entry, bank reconciliation, updating FX Rates, extracting financial reports, & updating manual Journal Entries using Xero.</p>
+      </div>
+      <div class="software-box">
+        <img src="images/QuickBooks.png" alt="QuickBooks Logo">
+        <h3>QuickBooks</h3>
+        <p class="details">QuickBooks — During my Accounting Internship, I have keyed in invoices, and have recorded bank transfers in differing currencies (e.g. SGD to USD).</p>
+      </div>
+      <div class="software-box">
+        <img src="images/power-bi-logo.png" alt="Power BI Logo">
+        <h3>Power BI</h3>
+        <p class="details">Microsoft Power BI — I am confident with using Microsoft Power BI to transform raw data into interactive dashboards and actionable insights.</p>
+      </div>
+      <div class="software-box">
+        <img src="images/knime.png" alt="KNIME Logo">
+        <h3>KNIME</h3>
+        <p class="details">KNIME —  I am confident with designing workflows for data cleaning, integration, and reporting to support efficient analysis and decision-making</p>
+      </div>
+      <div class="software-box">
+        <img src="images/excel.png" alt="Excel VBA Logo">
+        <h3>Excel VBA</h3>
+        <p class="details">Microsoft Excel VBA — I had hands-on learning experience with using Excel VBA during my studies in Singapore Polytechnic. This was further reinforced during my Internship, where I initiated to work on a VBA Automation Project to streamline the repetitive bank import file preparation process for the team.</p>
+      </div>
+      <div class="software-box">
+        <img src="images/uipath.png" alt="UiPath Logo">
+        <h3>UiPath</h3>
+        <p class="details">UiPath — I had an enriching learning experience with using Robotic Process Automation (RPA) on UiPath in my first year. This was further reinforced through my Client Project in my third year, where my team worked collaborated with StarsBridge Accounting to automate their repetitive business processes.</p>
+      </div>
+      <div class="software-box">
+        <img src="images/python.png" alt="Python Logo">
+        <h3>Python</h3>
+        <p class="details">Python — In my first year, as part of a graded project, my team of 3 built a scientific calculator together using Python, which mimicked the mathematical functions on a typical scientific calculator. It was complex & required us to dive deep into research during the development phase.</p>
+      </div>
+      <div class="software-box">
+        <img src="images/sql.png" alt="SQL Logo">
+        <h3>SQL</h3>
+        <p class="details">SQL — I am confident with using SQL to look up transaction records, modify existing data, organize & summarize transaction records.</p>
+      </div>
+      <div class="software-box">
+        <img src="images/singtax.png" alt="SingTax Logo">
+        <h3>SingTax</h3>
+        <p class="details">SingTax — I had learning experience with using SingTax Corporate 2024 to calculate tax, and e-filing duirng my 2nd year at Singapore Polytechnic.</p>
+      </div>
+      <div class="software-box">
+        <img src="images/minitab.png" alt="Minitab Logo">
+        <h3>Minitab</h3>
+        <p class="details">Minitab — I had learning experience with using Minitab Statistics to generate descriptive statistics, generate graphs & charts, compute regression & correlation, perform t-tests and ANOVA to draw meaningful business insights for decision-making.</p>
+      </div>
+      <div class="software-box">
+        <img src="images/abss.png" alt="ABSS Premier Logo">
+        <h3>ABSS Premier</h3>
+        <p class="details">ABSS Premier — I Had experience with keying in journal entries using ABSS Premier in my first year.</p>
+      </div>
+      <div class="software-box">
+        <img src="images/canva.png" alt="Canva Logo">
+        <h3>Canva</h3>
+        <p class="details">Canva — In various group projects in Polytechnic, I had experience using Canva to design slides, adding slide and elemental animations, creating visuals through layering & transparency, & incorporate music into the slides.</p>
+      </div>
+      <div class="software-box">
+        <img src="images/capcut.png" alt="CapCut Logo">
+        <h3>CapCut</h3>
+        <p class="details">CapCut — When editing my internship video presentation, I used CapCut to import media, adjust audio levels, and incorporate transitions and visual elements to enhance clarity and engagement, resulting in a professional presentation delivered.</p>
+      </div>
+      <div class="software-box">
+        <img src="images/clipchamp.png" alt="ClipChamp Logo">
+        <h3>ClipChamp</h3>
+        <p class="details">ClipChamp — I am confident with adding visuals, animations, transitions, & music into videos using ClipChamp, to enhance presentation quality.</p>
+      </div>
     </div>
   </section>
 
