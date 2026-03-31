@@ -4,20 +4,22 @@ body {
   margin: 0;
   background-color: #f4f4f9;
   color: #333;
-  /* Adjust this to match nav height exactly */
-  padding-top: 60px; /* nav bar height compensation */
+  /* Use nav height to offset content */
+  padding-top: var(--nav-height, 60px);
 }
 
 /* Navigation bar */
 nav {
-  background-color: #333;   /* dark bar */
+  --nav-height: 60px;     /* define nav height once */
+  background-color: #333; /* dark bar */
   padding: 15px 0;
   text-align: center;
-  position: fixed;          /* keep nav fixed at top */
+  position: fixed;        /* keep nav fixed at top */
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000;            /* keep above other content */
+  z-index: 1000;          /* keep above other content */
+  height: var(--nav-height);
 }
 
 nav ul {
@@ -304,12 +306,4 @@ header p,
 
   .timeline .milestone span {
     left: -30px;                  /* position dot on the vertical line */
-    top: 0;
-    transform: none;
-  }
-
-  .timeline .milestone p {
-    margin-top: 0;
-    font-weight: bold;
-  }
-}
+    top: 0
