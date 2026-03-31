@@ -118,46 +118,18 @@
 
   <!-- Timeline Script -->
   <script>
-    // Toggle milestones open/close for all timelines
+    // Toggle milestones open/close with fade + slide animation
     document.querySelectorAll('.milestone').forEach((milestone) => {
       milestone.addEventListener('click', () => {
         const details = milestone.querySelector('.details');
         if (!details) return;
-        const isVisible = details.style.display === 'block';
-        // Collapse all details across all timelines
-        document.querySelectorAll('.details').forEach(d => d.style.display = 'none');
+        const isVisible = details.classList.contains('show');
+        // Collapse all details
+        document.querySelectorAll('.details').forEach(d => d.classList.remove('show'));
         // Toggle current
-        details.style.display = isVisible ? 'none' : 'block';
+        if (!isVisible) details.classList.add('show');
       });
     });
   </script>
-
-  <!-- Timeline styling -->
-  <style>
-    .timeline {
-      position: relative;
-      margin: 40px 0;
-      height: 150px;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      border-top: 3px solid #0066cc;
-    }
-    .timeline .milestone {
-      flex: 1;
-      text-align: center;
-      position: relative;
-      cursor: pointer;
-    }
-    .timeline .milestone span {
-      position: absolute;
-      top: -10px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 20px;
-      height: 20px;
-      background: #0066cc;
-      border-radius: 50%;
-    }
-    .timeline .milestone p {
-      margin
+</body>
+</html>
