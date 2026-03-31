@@ -44,26 +44,38 @@
 
       <!-- Horizontal Interactive Timeline -->
       <h3>Interactive Project Timeline</h3>
-      <div id="timeline-horizontal" style="display:flex; align-items:center; justify-content:space-between; margin:30px 0; position:relative; border-top:3px solid #0066cc; padding-top:40px;">
-        <div class="milestone" style="text-align:center; flex:1; cursor:pointer;">
-          <span style="display:inline-block; width:20px; height:20px; background:#0066cc; border-radius:50%;"></span>
-          <p style="margin-top:10px; font-weight:bold;">May 2024</p>
-          <div class="details" style="display:none; margin-top:5px;">
+      <div id="timeline-horizontal" style="position:relative; margin:40px 0; height:150px; border-top:3px solid #0066cc; display:flex; justify-content:space-between; align-items:center;">
+        
+        <!-- April 2025 (start marker, no details) -->
+        <div class="milestone" style="text-align:center; flex:1; position:relative; cursor:pointer;">
+          <span style="position:absolute; top:-10px; left:50%; transform:translateX(-50%); width:20px; height:20px; background:#0066cc; border-radius:50%;"></span>
+          <p style="margin-top:30px; font-weight:bold;">April 2025</p>
+        </div>
+
+        <!-- May 2025 (Interim Presentation, text below) -->
+        <div class="milestone" style="text-align:center; flex:1; position:relative; cursor:pointer;">
+          <span style="position:absolute; top:-10px; left:50%; transform:translateX(-50%); width:20px; height:20px; background:#0066cc; border-radius:50%;"></span>
+          <p style="margin-top:30px; font-weight:bold;">May 2025</p>
+          <div class="details" style="display:none; margin-top:10px;">
             <p>Interim Presentation – Presented initial RPA solution to lecturer and client.</p>
           </div>
         </div>
-        <div class="milestone" style="text-align:center; flex:1; cursor:pointer;">
-          <span style="display:inline-block; width:20px; height:20px; background:#0066cc; border-radius:50%;"></span>
-          <p style="margin-top:10px; font-weight:bold;">June 2024</p>
-          <div class="details" style="display:none; margin-top:5px;">
+
+        <!-- June 2025 (example milestone, text above) -->
+        <div class="milestone" style="text-align:center; flex:1; position:relative; cursor:pointer;">
+          <span style="position:absolute; top:-10px; left:50%; transform:translateX(-50%); width:20px; height:20px; background:#0066cc; border-radius:50%;"></span>
+          <p style="margin-top:30px; font-weight:bold;">June 2025</p>
+          <div class="details" style="display:none; position:absolute; bottom:100%; left:50%; transform:translateX(-50%); margin-bottom:10px; background:#f9f9f9; padding:10px; border:1px solid #ccc; border-radius:6px; max-width:200px;">
             <p>Robot Deployment – Automated invoice creation, reminders, and calendar integration.</p>
           </div>
         </div>
-        <div class="milestone" style="text-align:center; flex:1; cursor:pointer;">
-          <span style="display:inline-block; width:20px; height:20px; background:#0066cc; border-radius:50%;"></span>
-          <p style="margin-top:10px; font-weight:bold;">July 2024</p>
-          <div class="details" style="display:none; margin-top:5px;">
-            <p>Final Showcase – Delivered promotional video and infographic at SP showcase.</p>
+
+        <!-- August 2025 (Final Presentation, text below) -->
+        <div class="milestone" style="text-align:center; flex:1; position:relative; cursor:pointer;">
+          <span style="position:absolute; top:-10px; left:50%; transform:translateX(-50%); width:20px; height:20px; background:#0066cc; border-radius:50%;"></span>
+          <p style="margin-top:30px; font-weight:bold;">Aug 2025</p>
+          <div class="details" style="display:none; margin-top:10px;">
+            <p>Final Presentation – Delivered promotional video and infographic at SP showcase.</p>
           </div>
         </div>
       </div>
@@ -118,16 +130,11 @@
   <!-- Timeline Script -->
   <script>
     // Toggle milestones open/close
-    document.querySelectorAll('#timeline-horizontal .milestone').forEach(milestone => {
+    document.querySelectorAll('#timeline-horizontal .milestone').forEach((milestone, index) => {
       milestone.addEventListener('click', () => {
         const details = milestone.querySelector('.details');
-        const isVisible = details.style.display === 'block';
+        const isVisible = details && details.style.display === 'block';
         // Collapse all others
         document.querySelectorAll('#timeline-horizontal .details').forEach(d => d.style.display = 'none');
         // Toggle current
-        details.style.display = isVisible ? 'none' : 'block';
-      });
-    });
-  </script>
-</body>
-</html>
+        if (details) details.style.display = isVisible ? 'none'
