@@ -2,43 +2,55 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Guanming's Professional Portfolio</title>
-  <link rel="stylesheet" href="style.css?v=2">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Navigation -->
-  <nav>
-    <a href="index.html">Home</a> |
-    <a href="achievements.html">Achievements</a> |
-    <a href="work.html">Work Experience</a> |
-    <a href="projects.html">Projects</a> |
-    <a href="leadership.html">Leadership & Service</a> |
-    <a href="awards.html">Awards & Certifications</a> |
-    <a href="skills.html">Skills & Tools</a> |
-    <a href="testimonials.html">Testimonials</a>
-  </nav>
-
-  <!-- Header -->
+  <!-- Navigation Bar -->
   <header>
-    <h1>Guanming's Professional Portfolio</h1>
-    <p>A portfolio showcasing achievements, projects, and leadership experiences that embody initiative and scholarship potential</p>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#work-experience">Work Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#leadership-service">Leadership & Service</a></li>
+        <li><a href="#awards-certifications">Awards & Certifications</a></li>
+        <li><a href="#skills-tools">Skills & Tools</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <!-- Home Section -->
-  <section class="intro" style="display:flex; align-items:flex-start; gap:20px;">
-    <!-- Profile picture on the left -->
-    <div class="profile-pic">
-      <img src="images/profile-pic.jpeg" alt="Guanming Chen">
-    </div>
+  <!-- Banner -->
+  <section class="banner">
+    <h1>Guanming's Professional Portfolio</h1>
+    <p>A portfolio showcasing achievements, projects, and leadership experiences that embody initiative and scholarship potential.</p>
+  </section>
 
-    <!-- Personal statement on the right -->
-    <div class="statement">
-      <h2 style="margin-top:0;">Personal Statement</h2>
-      <p>Hello everyone! I am an Accountancy graduate from Singapore Polytechnic with a strong passion for numbers and attention to detail. I have built a solid foundation in financial reporting, taxation, and accounting principles, complemented by experience in Excel VBA, RPA, Python, SQL, and KNIME for data analysis and automation.</p>
-      <p>My academic performance reflects growth and consistency. While maintaining a CGPA of 3.69, I achieved a perfect 4.0 GPA in my final year, demonstrating my ability to adapt and excel. This reflects my discipline, resilience, and commitment to excellence.</p>
-      <p>Guided by integrity and continuous improvement, I aspire to become a forward-thinking accounting professional who leverages technology to contribute meaningfully to organisations and the community.</p>
-      <p>I am also confident that AI will play an increasingly important role in the accounting industry in the near future, and I am eager to explore how we can leverage technology to further enhance operational efficiency for organisations!</p>
-      <p>During my Accounting Internship at RSM, I took the initiative to develop an Excel VBA macro to automate the bank import file preparation process. This solution significantly improved efficiency and reduced manual errors for the team, cutting a task that typically took 10 minutes down to just 5 seconds. This experience demonstrates my strong initiative and innovative approach to streamlining accounting processes.</p>
+  <!-- Personal Statement Section -->
+  <section id="personal-statement">
+    <h2>Personal Statement</h2>
+    <div class="personal-container">
+      <!-- Profile Picture -->
+      <div class="profile-pic">
+        <img src="images/profile.jpg" alt="Profile Picture of Guanming">
+      </div>
+
+      <!-- Divider Line -->
+      <hr>
+
+      <!-- Personal Statement Text -->
+      <div class="statement-text">
+        <p>Hello everyone! I am an Accountancy graduate from Singapore Polytechnic with a strong passion for numbers and attention to detail. I have built a solid foundation in financial reporting, taxation, and accounting principles, complemented by experience in Excel VBA, RPA, Python, SQL, and KNIME for data analysis and automation.</p>
+
+        <p>My academic performance reflects growth and consistency. While maintaining a CGPA of 3.69, I achieved a perfect 4.0 GPA in my final year, demonstrating my ability to adapt and excel. This reflects my discipline, resilience, and commitment to excellence.</p>
+
+        <p>Guided by integrity and continuous improvement, I aspire to become a forward-thinking accounting professional who leverages technology to contribute meaningfully to organisations and the community.</p>
+
+        <p>I am also confident that AI will play an increasingly important role in the accounting industry in the near future, and I am eager to explore how we can leverage technology to further enhance operational efficiency for organisations!</p>
+      </div>
     </div>
   </section>
 </body>
