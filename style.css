@@ -318,4 +318,8 @@ header p,
     margin-top: 0;
     font-weight: bold;
   }
+  /* Extra offset for Skills page only */
+body.skills-page {
+  padding-top: 70px; /* ensures Skills header clears the fixed nav */
+}
 }
