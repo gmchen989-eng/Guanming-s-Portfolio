@@ -42,25 +42,28 @@
         <li>Created promotional video and poster infographic using Canva for Singapore Polytechnic showcase.</li>
       </ul>
 
-      <!-- Interactive Project Timeline -->
+      <!-- Horizontal Interactive Timeline -->
       <h3>Interactive Project Timeline</h3>
-      <div id="timeline" style="margin:20px 0; border-left:3px solid #0066cc; padding-left:20px;">
-        <div class="milestone" style="margin-bottom:20px; cursor:pointer;">
-          <p style="margin:0; font-weight:bold;">▶ May 2024: Interim Presentation</p>
+      <div id="timeline-horizontal" style="display:flex; align-items:center; justify-content:space-between; margin:30px 0; position:relative; border-top:3px solid #0066cc; padding-top:40px;">
+        <div class="milestone" style="text-align:center; flex:1; cursor:pointer;">
+          <span style="display:inline-block; width:20px; height:20px; background:#0066cc; border-radius:50%;"></span>
+          <p style="margin-top:10px; font-weight:bold;">May 2024</p>
           <div class="details" style="display:none; margin-top:5px;">
-            <p>Presented initial RPA solution to lecturer and client.</p>
+            <p>Interim Presentation – Presented initial RPA solution to lecturer and client.</p>
           </div>
         </div>
-        <div class="milestone" style="margin-bottom:20px; cursor:pointer;">
-          <p style="margin:0; font-weight:bold;">▶ June 2024: Robot Deployment</p>
+        <div class="milestone" style="text-align:center; flex:1; cursor:pointer;">
+          <span style="display:inline-block; width:20px; height:20px; background:#0066cc; border-radius:50%;"></span>
+          <p style="margin-top:10px; font-weight:bold;">June 2024</p>
           <div class="details" style="display:none; margin-top:5px;">
-            <p>Automated invoice creation, reminders, and calendar integration.</p>
+            <p>Robot Deployment – Automated invoice creation, reminders, and calendar integration.</p>
           </div>
         </div>
-        <div class="milestone" style="margin-bottom:20px; cursor:pointer;">
-          <p style="margin:0; font-weight:bold;">▶ July 2024: Final Showcase</p>
+        <div class="milestone" style="text-align:center; flex:1; cursor:pointer;">
+          <span style="display:inline-block; width:20px; height:20px; background:#0066cc; border-radius:50%;"></span>
+          <p style="margin-top:10px; font-weight:bold;">July 2024</p>
           <div class="details" style="display:none; margin-top:5px;">
-            <p>Delivered promotional video and infographic at SP showcase.</p>
+            <p>Final Showcase – Delivered promotional video and infographic at SP showcase.</p>
           </div>
         </div>
       </div>
@@ -70,7 +73,7 @@
            style="display:block; margin:0 auto; max-width:80%; height:auto; border-radius:6px; box-shadow:0 4px 6px rgba(0,0,0,0.1);">
     </div>
 
-    <!-- Enterprise Innovation -->
+    <!-- Other projects unchanged -->
     <div class="achievement-card">
       <h2 style="text-align:left;">Enterprise Innovation</h2>
       <p><em>Team of 6, Client: GreenLoopFarms</em></p>
@@ -93,7 +96,6 @@
            style="display:block; margin:20px auto; max-width:80%; height:auto;">
     </div>
 
-    <!-- Entrepreneurship Prototype -->
     <div class="achievement-card">
       <h2 style="text-align:left;">Entrepreneurship Business Prototype</h2>
       <p><em>Team of 5, Singapore Polytechnic Entrepreneurship Gallery Walk 2024</em></p>
@@ -116,12 +118,12 @@
   <!-- Timeline Script -->
   <script>
     // Toggle milestones open/close
-    document.querySelectorAll('#timeline .milestone').forEach(milestone => {
+    document.querySelectorAll('#timeline-horizontal .milestone').forEach(milestone => {
       milestone.addEventListener('click', () => {
         const details = milestone.querySelector('.details');
         const isVisible = details.style.display === 'block';
         // Collapse all others
-        document.querySelectorAll('#timeline .details').forEach(d => d.style.display = 'none');
+        document.querySelectorAll('#timeline-horizontal .details').forEach(d => d.style.display = 'none');
         // Toggle current
         details.style.display = isVisible ? 'none' : 'block';
       });
