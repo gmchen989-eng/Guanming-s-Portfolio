@@ -44,18 +44,24 @@
 
       <!-- Interactive Project Timeline -->
       <h3>Interactive Project Timeline</h3>
-      <div style="position:relative; margin:20px 0; padding-left:40px; border-left:3px solid #0066cc;">
-        <div style="margin-bottom:30px; position:relative;">
-          <span style="position:absolute; left:-12px; top:0; width:20px; height:20px; background:#0066cc; border-radius:50%;"></span>
-          <p><strong>May 2024:</strong> Interim Presentation – Presented initial RPA solution to lecturer and client.</p>
+      <div id="timeline" style="margin:20px 0; border-left:3px solid #0066cc; padding-left:20px;">
+        <div class="milestone" style="margin-bottom:20px; cursor:pointer;">
+          <p style="margin:0; font-weight:bold;">▶ May 2024: Interim Presentation</p>
+          <div class="details" style="display:none; margin-top:5px;">
+            <p>Presented initial RPA solution to lecturer and client.</p>
+          </div>
         </div>
-        <div style="margin-bottom:30px; position:relative;">
-          <span style="position:absolute; left:-12px; top:0; width:20px; height:20px; background:#0066cc; border-radius:50%;"></span>
-          <p><strong>June 2024:</strong> Robot Deployment – Automated invoice creation, reminders, and calendar integration.</p>
+        <div class="milestone" style="margin-bottom:20px; cursor:pointer;">
+          <p style="margin:0; font-weight:bold;">▶ June 2024: Robot Deployment</p>
+          <div class="details" style="display:none; margin-top:5px;">
+            <p>Automated invoice creation, reminders, and calendar integration.</p>
+          </div>
         </div>
-        <div style="margin-bottom:30px; position:relative;">
-          <span style="position:absolute; left:-12px; top:0; width:20px; height:20px; background:#0066cc; border-radius:50%;"></span>
-          <p><strong>July 2024:</strong> Final Showcase – Delivered promotional video and infographic at SP showcase.</p>
+        <div class="milestone" style="margin-bottom:20px; cursor:pointer;">
+          <p style="margin:0; font-weight:bold;">▶ July 2024: Final Showcase</p>
+          <div class="details" style="display:none; margin-top:5px;">
+            <p>Delivered promotional video and infographic at SP showcase.</p>
+          </div>
         </div>
       </div>
 
@@ -106,5 +112,20 @@
            style="display:block; margin:0 auto; max-width:80%; height:auto; border-radius:6px; box-shadow:0 4px 6px rgba(0,0,0,0.1);">
     </div>
   </main>
+
+  <!-- Timeline Script -->
+  <script>
+    // Toggle milestones open/close
+    document.querySelectorAll('#timeline .milestone').forEach(milestone => {
+      milestone.addEventListener('click', () => {
+        const details = milestone.querySelector('.details');
+        const isVisible = details.style.display === 'block';
+        // Collapse all others
+        document.querySelectorAll('#timeline .details').forEach(d => d.style.display = 'none');
+        // Toggle current
+        details.style.display = isVisible ? 'none' : 'block';
+      });
+    });
+  </script>
 </body>
 </html>
