@@ -318,8 +318,8 @@ header p,
     margin-top: 0;
     font-weight: bold;
   }
-  /* Extra offset for Skills page only */
-body.skills-page {
-  padding-top: 60px !important; /* force override */
+/* Extra offset for Skills page only */
+html body.skills-page {
+  padding-top: 60px !important;
 }
 }
