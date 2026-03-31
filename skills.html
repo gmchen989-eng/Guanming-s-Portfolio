@@ -10,6 +10,7 @@
       margin: 0;
       background-color: #f4f4f9;
       color: #333;
+      padding-top: 70px; /* NEW: offset for fixed nav */
     }
 
     /* Navigation bar */
@@ -17,15 +18,20 @@
       background-color: #333;
       padding: 15px 0;
       text-align: center;
+      position: fixed;   /* NEW: keeps nav fixed */
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
     }
 
     nav ul {
       list-style: none;
       margin: 0;
       padding: 0;
-      display: flex;           /* changed from inline-flex */
-      flex-wrap: wrap;         /* allow wrapping on small screens */
-      justify-content: center; /* keep centered */
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
     }
 
     nav ul li {
@@ -129,7 +135,7 @@
     .software-box:hover {
       transform: translateY(-8px);
       box-shadow: 0 10px 15px rgba(0,0,0,0.2);
-      background-color: #cce6ff; /* stronger blue tint */
+      background-color: #cce6ff;
     }
 
     .software-box:hover .details {
@@ -195,7 +201,7 @@
     </ul>
   </section>
 
- <!-- Software Section -->
+  <!-- Software Section -->
   <section id="software">
     <h2>Software Proficiency</h2>
     <div class="software-grid">
