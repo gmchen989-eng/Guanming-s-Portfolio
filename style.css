@@ -47,31 +47,28 @@ nav a:hover {
   text-decoration: none !important;
 }
 
-/* Shared Banner Style (Home, Skills, Achievements, Awards) */
+/* Shared Banner Style (Skills, Achievements, Home, Awards) */
 header,
 .home-banner,
-.achievements-banner,
-.skills-banner {   /* added skills-banner */
+.achievements-banner {
   background: linear-gradient(to right, #0066cc, #003366);
   color: white;
   text-align: center;
-  padding: 40px 20px;   /* reduced from 60px to 40px */
+  padding: 60px 20px;
 }
 
 header h1,
 .home-banner h1,
-.achievements-banner h1,
-.skills-banner h1 {   /* added skills-banner */
+.achievements-banner h1 {
   margin: 0;
-  font-size: 2.3em;
+  font-size: 2.5em;
   color: white;
   border: none;
 }
 
 header p,
 .home-banner p,
-.achievements-banner p,
-.skills-banner p {   /* added skills-banner */
+.achievements-banner p {
   margin-top: 10px;
   font-size: 1.2em;
   color: white;
@@ -223,24 +220,22 @@ header p,
 @media (max-width: 768px) {
   header,
   .home-banner,
-  .achievements-banner,
-  .skills-banner {   /* added skills-banner */
-    padding: 30px 15px;
+  .achievements-banner {
+    padding: 40px 15px;
   }
 
   header h1,
   .home-banner h1,
-  .achievements-banner h1,
-  .skills-banner h1 {   /* added skills-banner */
+  .achievements-banner h1 {
     font-size: 2em;
   }
 }
 
 /* --- Projects Page Override --- */
 #projects-page .achievement-card:hover {
-  background-color: white !important;
-  transform: none !important;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1) !important;
+  background-color: white !important; /* keep background white */
+  transform: none !important;         /* no lift */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1) !important; /* normal shadow only */
 }
 
 /* --- Timeline Styling --- */
@@ -283,7 +278,7 @@ header p,
   opacity: 0;
   transform: translateY(10px);
   transition: opacity 0.4s ease, transform 0.4s ease;
-  margin-top: 8px;
+  margin-top: 8px; /* subtle gap between date and text */
 }
 
 .timeline .details.show {
@@ -295,21 +290,21 @@ header p,
 /* --- Responsive Timeline Fix for Mobile --- */
 @media (max-width: 600px) {
   .timeline {
-    flex-direction: column;
-    height: auto;
-    border-top: none;
-    border-left: 3px solid #0066cc;
+    flex-direction: column;       /* stack milestones vertically */
+    height: auto;                 /* let height grow naturally */
+    border-top: none;             /* remove horizontal line */
+    border-left: 3px solid #0066cc; /* vertical line instead */
     align-items: flex-start;
     padding-left: 20px;
   }
 
   .timeline .milestone {
     text-align: left;
-    margin-bottom: 20px;
+    margin-bottom: 20px;          /* spacing between milestones */
   }
 
   .timeline .milestone span {
-    left: -30px;
+    left: -30px;                  /* position dot on the vertical line */
     top: 0;
     transform: none;
   }
