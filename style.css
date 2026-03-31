@@ -320,6 +320,6 @@ header p,
   }
   /* Extra offset for Skills page only */
 body.skills-page {
-  padding-top: 60px; /* adjust until banner clears nav bar neatly */
+  padding-top: 60px !important; /* force override */
 }
 }
