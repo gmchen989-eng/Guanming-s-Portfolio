@@ -1,47 +1,62 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<!-- <html lang="en"> -->
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- <meta charset="UTF-8"> -->
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
   <title>Skills & Tools</title>
+  <link rel="stylesheet" href="style.css">
+</head>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background-color: #f4f4f9;
-      color: #333;
-    }
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f4f4f9;
+  color: #333;
+  padding-top: var(--nav-height, 45px); /* offset content by nav height */
+}
 
-    /* Navigation bar */
-    nav {
-      background-color: #333;
-      padding: 15px 0;
-      text-align: center;
-    }
+/* Navigation bar */
+nav {
+  --nav-height: 45px;       /* define nav height once */
+  background-color: #333;   /* dark bar */
+  padding: 10px 0;          /* slimmer padding */
+  text-align: center;
+  position: fixed;          /* keep nav fixed at top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;            /* keep above other content */
+  height: var(--nav-height);
+}
 
-    nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;           /* changed from inline-flex */
-      flex-wrap: wrap;         /* allow wrapping on small screens */
-      justify-content: center; /* keep centered */
-    }
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex !important;          /* horizontal layout */
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;                         /* consistent spacing between items */
+}
 
-    nav ul li {
-      margin: 0 15px;
-    }
+nav ul li {
+  display: inline-block;
+}
 
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s ease;
-    }
+nav a {
+  color: white !important;             /* always white text */
+  text-decoration: none !important;    /* no underline */
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
 
-    nav ul li a:hover {
-      color: #ffcc00;
-    }
+nav a:hover {
+  color: #ffcc00 !important;           /* gold hover */
+  text-decoration: none !important;
+}
+
 
     /* Page header */
     header {
@@ -155,15 +170,15 @@
   <!-- Navigation -->
   <nav>
     <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="achievements.html">Achievements</a></li>
-      <li><a href="work.html">Work Experience</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="leadership.html">Leadership & Service</a></li>
-      <li><a href="awards.html">Awards & Certifications</a></li>
-      <li><a href="skills.html">Skills & Tools</a></li>
-      <li><a href="testimonials.html">Testimonials</a></li>
-    </ul>
+      <li><a href="index.html" style="background:none; box-shadow:none; transform:none;">Home</a></li>
+      <li><a href="achievements.html" style="background:none; box-shadow:none; transform:none;">Achievements</a></li>
+      <li><a href="work.html" style="background:none; box-shadow:none; transform:none;">Work Experience</a></li>
+      <li><a href="projects.html" style="background:none; box-shadow:none; transform:none;">Projects</a></li>
+      <li><a href="leadership.html" style="background:none; box-shadow:none; transform:none;">Leadership & Service</a></li>
+      <li><a href="awards.html" style="background:none; box-shadow:none; transform:none;">Awards & Certifications</a></li>
+      <li><a href="skills.html" style="background:none; box-shadow:none; transform:none;">Skills & Tools</a></li>
+      <li><a href="testimonials.html" style="background:none; box-shadow:none; transform:none;">Testimonials</a></li>
+   </ul>
   </nav>
 
   <!-- Page Header -->
